@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Product preview card component</title>
+  <style>
+    :root {
+      --primary-color: #f3eae3;
+      --very-dark-blue: #1c232b;
+      --dark-grayish-blue: #6c7289;
+      --dark-cyan: #3c8067;
+      --cream: #f2ebe3;
+      --test: #767983 --radiuse: 3%;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h2 {
+      line-height: 0.3rem;
+      font-family: Fraunces;
+      font-weight: 700;
+    }
+
+    h5 {
+      text-transform: uppercase;
+      font-family: Montserrat;
+      letter-spacing: 0.4em;
+      font-weight: 300;
+    }
+
+    p {
+      color: var(--dark-grayish-blue);
+      font-family: Montserrat;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container>div {
+      width: 18rem;
+      height: 68%;
+    }
+
+    .container>div:nth-child(1) {
+      background-color: blueviolet;
+      border-top-left-radius: var(--radiuse);
+      border-bottom-left-radius: var(--radiuse);
+
+    }
+
+    .container>div:nth-child(2) {
+      background-color: white;
+      border-top-right-radius: var(--radiuse);
+      border-bottom-right-radius: var(--radiuse);
+    }
+
+    .row {
+      width: 50vw;
+      flex-direction: row;
+    }
+
+    .col {
+      flex-direction: column;
+    }
+
+      .p-5 {
+      padding: 5px;
+    }
+
+    .p-10 {
+      padding: 10px;
+    }
+
+    .p-30 {
+      padding: 30px;
+    }
+
+    .ps-20 {
+      padding-left: 20px;
+    }
+
+  
+  </style>
+
+</head>
+
+<body>
+  <img src="design/active-states.jpg" alt="" width="500px">
+  <div class="container align-items-center p-30" style="background-color:var(--primary-color);">
+    <div style="display:inline;">
+      <img src="images/image-product-desktop.jpg" alt="" width="100%" height="100%"
+        style="border-bottom-left-radius:var(--radiuse); border-top-left-radius:var(--radiuse);">
+    </div>
+    <div class="ps-20">
+      <h5>perfume</h5>
+      <h2> Gabrielle </h2>
+      <h2> Essence Eau</h2>
+      <h2> De Parfum</h2>
+      <p>A floral, solar and voluptuous interpretation composed by Olivier Polge,
+        Perfumer-Creator for the House of CHANEL.</p>
+      <h1 style="display:inline; color:var(--dark-cyan);font-family:Abhaya Libre ExtraBold;"> $149.99</h1>
+      <h6 style="display:inline; text-decoration:line-through;"> $169.99</h6>
+
+      Add to Cart
+    </div>
+
+  </div>
+</body>
+</html>
