@@ -10,12 +10,27 @@
   <title>Frontend Mentor | Product preview card component</title>
   <style>
     :root {
-      --primary-color: #f3eae3;
-      --very-dark-blue: #1c232b;
-      --dark-grayish-blue: #6c7289;
-      --dark-cyan: #3c8067;
-      --cream: #f2ebe3;
-      --test: #767983 --radiuse: 3%;
+      /* ## Layout */
+      --mobile: 375px;
+      --desktop: 1440px;
+      /* ## Colors
+      ### Primary */
+      --dark-cyan: hsl(158, 36%, 37%);
+      --cream: hsl(30, 38%, 92%);
+      /* ### Neutral */
+      --very-dark-blue: hsl(212, 21%, 14%);
+      --dark-grayish-blue: hsl(228, 12%, 48%);
+      /* ## Typography
+      ### Body Copy (paragraph) */
+      --font-size: 14px;
+      /* ### Font */
+      --font-montserrat: Montserrat;
+      --montserrat-weight1: 500;
+      --montserrat-weight2: 700;
+      --font-fraunces: Fraunces;
+      --fraunces-weight: 700;
+
+      --radiuse: 3%;
     }
 
     * {
@@ -83,11 +98,7 @@
     .col {
       flex-direction: column;
     }
-
-      .p-5 {
-      padding: 5px;
-    }
-
+   
     .p-10 {
       padding: 10px;
     }
@@ -99,15 +110,13 @@
     .ps-20 {
       padding-left: 20px;
     }
-
-  
   </style>
 
 </head>
 
 <body>
-  <img src="design/active-states.jpg" alt="" width="500px">
-  <div class="container align-items-center p-30" style="background-color:var(--primary-color);">
+  <!-- <img src="design/active-states.jpg" alt="" width="500px"> -->
+  <div class="container align-items-center p-30" style="background-color:var(--cream);">
     <div style="display:inline;">
       <img src="images/image-product-desktop.jpg" alt="" width="100%" height="100%"
         style="border-bottom-left-radius:var(--radiuse); border-top-left-radius:var(--radiuse);">
@@ -121,10 +130,8 @@
         Perfumer-Creator for the House of CHANEL.</p>
       <h1 style="display:inline; color:var(--dark-cyan);font-family:Abhaya Libre ExtraBold;"> $149.99</h1>
       <h6 style="display:inline; text-decoration:line-through;"> $169.99</h6>
-
       Add to Cart
     </div>
-
   </div>
 </body>
 </html>
