@@ -20,6 +20,7 @@
       /* ### Neutral */
       --very-dark-blue: hsl(212, 21%, 14%);
       --dark-grayish-blue: hsl(228, 12%, 48%);
+      --btn-hover: hsl(158, 58%, 14%);
       /* ## Typography
       ### Body Copy (paragraph) */
       --font-size: 14px;
@@ -48,21 +49,28 @@
     }
 
     h2 {
-      line-height: 0.3rem;
+      line-height: 1em;
       font-family: Fraunces;
       font-weight: 700;
+      font-size: 32px;
+      color: var(--very-dark-blue);
     }
 
     h5 {
       text-transform: uppercase;
       font-family: Montserrat;
+      font-size: small;
       letter-spacing: 0.4em;
-      font-weight: 300;
+      font-weight: 500;
+      color: var(--dark-grayish-blue);
     }
 
     p {
       color: var(--dark-grayish-blue);
       font-family: Montserrat;
+      font-size: var();
+      line-height: 1.5em;
+      font-size: 15px;
     }
 
     .container {
@@ -70,6 +78,7 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      background-color: var(--cream);
     }
 
     .container>div {
@@ -78,7 +87,6 @@
     }
 
     .container>div:nth-child(1) {
-      background-color: blueviolet;
       border-top-left-radius: var(--radiuse);
       border-bottom-left-radius: var(--radiuse);
 
@@ -88,6 +96,10 @@
       background-color: white;
       border-top-right-radius: var(--radiuse);
       border-bottom-right-radius: var(--radiuse);
+      padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
     }
 
     .row {
@@ -98,7 +110,50 @@
     .col {
       flex-direction: column;
     }
-   
+
+    .price {
+      display: flex;
+      align-items: center;
+    }
+
+    .new {
+      color: var(--dark-cyan);
+      font-family: var(--font-fraunces);
+      font-size: xx-large;
+      font-weight: var(--fraunces-weight);
+      margin-right: 24px;
+    }
+
+    .old {
+      text-decoration: line-through;
+      font-family: var(--font-montserrat);
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--dark-cyan);
+      color: white;
+      border-radius: var(--radiuse);
+      padding: 20px;
+    }
+
+    .btn>img {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    .btn>div {
+      color: inherit;
+      font-size: 18px;
+      margin-right: 6px;
+    }
+
+    .btn:hover {
+      background-color: var(--btn-hover);
+    }
+
     .p-10 {
       padding: 10px;
     }
@@ -110,28 +165,41 @@
     .ps-20 {
       padding-left: 20px;
     }
+
+    .pe-20 {
+      padding-right: 20px;
+    }
   </style>
 
 </head>
 
 <body>
   <!-- <img src="design/active-states.jpg" alt="" width="500px"> -->
-  <div class="container align-items-center p-30" style="background-color:var(--cream);">
-    <div style="display:inline;">
+  <div class="container">
+    <div class="pic-side">
       <img src="images/image-product-desktop.jpg" alt="" width="100%" height="100%"
         style="border-bottom-left-radius:var(--radiuse); border-top-left-radius:var(--radiuse);">
     </div>
-    <div class="ps-20">
+    <div class="ps-20 pe-20">
       <h5>perfume</h5>
-      <h2> Gabrielle </h2>
-      <h2> Essence Eau</h2>
-      <h2> De Parfum</h2>
+      <h2> Gabrielle Essence Eau De Parfum</h2>
       <p>A floral, solar and voluptuous interpretation composed by Olivier Polge,
         Perfumer-Creator for the House of CHANEL.</p>
-      <h1 style="display:inline; color:var(--dark-cyan);font-family:Abhaya Libre ExtraBold;"> $149.99</h1>
-      <h6 style="display:inline; text-decoration:line-through;"> $169.99</h6>
-      Add to Cart
+      <div class="price">
+        <div class="new">
+          $149.99
+        </div>
+        <div class="old">
+          $169.99
+        </div>
+      </div>
+      <div class="btn">
+        <img src="images/icon-cart.svg" alt="">
+        <div> Add to Cart</div>
+      </div>
+
     </div>
   </div>
 </body>
+
 </html>
