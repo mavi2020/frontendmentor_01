@@ -1,21 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | QR code component</title>
 
- <style>
+  <style>
+    :root {
+      /* ## Layout */
+
+      --mobile: 375px;
+      --desktop: 1440px;
+
+      /* ## Colors */
+
+      --light-gray: hsl(212, 45%, 89%);
+      --grayish-blue: hsl(220, 15%, 55%);
+      --dark-blue: hsl(218, 44%, 22%);
+
+      /* ## Typography
+
+         ### Body Copy */
+
+      --font-size-p: 15px;
+
+      /* ### Font */
+
+      --font-family: Outfit;
+      --f-weight-400: 400;
+      --f-weight-700: 700;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: aqua;
+      /* background-color: var(--light-gray); */
+    }
+
+    h1 {
+      font-family: var(--font-family);
+      font-weight: var(--f-weight-700);
+    }
+
+    p {
+      font-family: var(--font-family);
+      font-size: var(--font-size-p);
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 40vw;
+      background-color: white;
+      margin: auto;
+      border-radius: 10px;
+    }
+
+    .qr {
+      padding: 10px;
+
+    }
+
+    .qr img {
+      border-radius: 10px;
+      max-width: 100%;
+
+    }
+
+    .details {
+      padding-left: 35px;
+      padding-right: 35px;
+      text-align: center;
+    }
+
+    .details p {
+      padding-left: 50px;
+    }
   </style>
 </head>
+
 <body>
+  <main>
+    <section>
+      <img src="design/desktop-design.jpg" alt="" width="500">
+      <div class="container">
+        <div class="qr">
+          <img src="images/image-qr-code.png" alt="QR Code Image">
+        </div>
+        <div class="details">
+          <h1>
+            Improve your front-end skills by building projects
+          </h1>
+          <p> Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
+          </p>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/develoba">DeveLoba</a>.
+      </div>
+    </section>
+  </main>
+</body>
 
-  Improve your front-end skills by building projects
-
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-  
- </body>
 </html>
